@@ -31,7 +31,7 @@ def draw(root, panel, map, player1, player2):
     
 
 #print(root.winfo_screenwidth()) #Pour récupérer la taille de l'écran de l'utilisateur
-#print(root.winfo_screenheight())
+#print(root.winfo_screenheight()) #J'ai hésité à mettre ça
 
 def onClick(event):
     global status
@@ -44,7 +44,7 @@ def onClick(event):
                     if (dist<2):
                         status = "place1"
                         player1.px = event.x//40
-                        player1.py = event.y//40
+                        player1.py = event.y//40 
                         draw(root, panel, map, player1, player2)
                         
 
