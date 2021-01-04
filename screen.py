@@ -28,10 +28,7 @@ def draw(root, panel, map, player1, player2):
         else:
             winner = "Joueur 1"
         panel.create_text(138, 149, font="Courier", text="Le "+winner+" a gagné !")
-    
-
-#print(root.winfo_screenwidth()) #Pour récupérer la taille de l'écran de l'utilisateur
-#print(root.winfo_screenheight()) #J'ai hésité à mettre ça
+   
 
 def onClick(event):
     global status
@@ -92,19 +89,19 @@ status = "waiting1"
 
 root = Tk()
 
-#Configuration de la page
+#Page configuration
 root.title("Isola")
 root.geometry("720x480")
 root["bg"] = "#95a5a6"
 root.bind("<Escape>", lambda e: e.widget.quit())
 root.bind("<Button-1>", onClick)
 
-#Titre
+#Title
 title = Label(root, text="Isola", bg="#95a5a6")
 title.config(font=("Courier",34))
 title.pack()
 
-#Création de la zone de dessin
+#Drawing zone
 panel = Canvas(root, width=277, height=397, background="#f1c40f", borderwidth=0)
 
 map = [[0 for i in range(10)] for a in range(7)]
